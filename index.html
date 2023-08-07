@@ -37,7 +37,7 @@
          function setIframeSrc() {
            var offlineHtml = '<html><body><h1>You are currently offline</h1></body></html>';
            var offlineDataUrl = 'data:text/html;charset=utf-8,' + encodeURI(offlineHtml);
-           var iframeSrc = navigator.onLine ? (localStorage.getItem("lastViewedPage") || "login.html") : offlineDataUrl;
+           var iframeSrc = navigator.onLine ? (localStorage.getItem("lastViewedPage") || "https://wowligo.github.io/ShaoBank/login.html") : offlineDataUrl;
            
            $('#loader').show(); 
            $('#preview-frame').attr('src', iframeSrc);
