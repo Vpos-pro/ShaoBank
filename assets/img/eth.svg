@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <g fill-rule="nonzero" fill="none">
+        <circle fill="#627EEA" cx="13" cy="13" r="13"/>
+        <g fill="#FFF">
+            <path fill-opacity=".602" d="M13.405 3.25v7.207l6.09 2.722z"/>
+            <path d="m13.405 3.25-6.092 9.929 6.092-2.722z"/>
+            <path fill-opacity=".602" d="M13.405 17.849v4.897l6.095-8.433z"/>
+            <path d="M13.405 22.746v-4.898l-6.092-3.535z"/>
+            <path fill-opacity=".2" d="m13.405 16.716 6.09-3.537-6.09-2.72z"/>
+            <path fill-opacity=".602" d="m7.313 13.179 6.092 3.537v-6.258z"/>
+        </g>
+    </g>
+</svg>
