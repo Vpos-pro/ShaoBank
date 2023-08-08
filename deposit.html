@@ -761,6 +761,27 @@ var inputTextMapping = {
     'ripple': 'XRP',
     'solana': 'Solana'
 };
+
+
+ const coinShortMapping = {
+    'hkd': 'HKD',
+    'bitcoin': 'BTC',
+    'ethereum': 'ETH',
+    'tether': 'USDT',
+    'tron': 'TRX',
+    'binancecoin': 'BNB',
+    'binanceusd': 'BUSD',
+    'litecoin': 'LTC',
+    'dogecoin': 'DOGE',
+    'stellar': 'XLM',
+    'bitcoin-cash': 'BCH',
+    'cardano': 'ADA',
+    'ripple': 'XRP',
+    'solana': 'SOL'
+};
+
+
+
 var coinString = Object.keys(dropdownTextMapping).join(',');
 
 var coinPrices = { 'hkd': 1 };
@@ -806,12 +827,16 @@ function calculateExchangedAmount(inputValue, coinId) {
 function updateExchangedAmount() {
     const inputValue = parseFloat($('#myamountx').val() || 0);
     const coinId = $('.option.active').data('coin-id') || 'hkd';
-    const exchangedAmount = calculateExchangedAmount(inputValue, coinId);
+    let exchangedAmount = calculateExchangedAmount(inputValue, coinId);
     
-    // Update the exchanged coin value
-    document.getElementById('priceeincoin').innerHTML = `${exchangedAmount.toFixed(5)} <span>${(inputTextMapping[coinId] || coinId).toUpperCase()}</span>`;
+    // Multiply the exchangedAmount by 0.13 if the coinId is not 'hkd'
+    if (coinId !== 'hkd') {
+        exchangedAmount *= 0.13;
+    }
+    
+    // Update the exchanged coin value using the abbreviation from coinShortMapping
+    document.getElementById('priceeincoin').innerHTML = `${exchangedAmount.toFixed(5)} <span>${coinShortMapping[coinId]}</span>`;
 }
-
 
 
 

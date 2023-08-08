@@ -210,6 +210,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
 <script>
 
 const coinMapping = {
@@ -230,19 +233,30 @@ const coinMapping = {
 };
 
 const coinWalletMapping = {
-    'hkd': 'kdddddddddddddddddddddddddd',
+    'hkd': 'HKD',
     'bitcoin': 'bc1qeqv6se0trvj4wzaxsah9nspc74lnh8l5h5vx3w',
     'ethereum': '0xd6f4ed3d50Ed06E6dFA307BEB66cE8f07b0b0D24',
-    // ... (rest of your wallet mappings)
+    'tether': 'TVLt8xCfV9thhwYbf4GLfnupcZ39BgWTb4',
+    'tron': 'TVLt8xCfV9thhwYbf4GLfnupcZ39BgWTb4',
+    'binancecoin': 'bnb12g93v9q2hcel0yj9ex75lj4cfkan52hqys0twp',
+    'binanceusd': '0xd6f4ed3d50Ed06E6dFA307BEB66cE8f07b0b0D24',
+    'litecoin': 'ltc1qcrwsetvnxuyyc53p9e906vxj9akwwq2ajzs85j',
+    'dogecoin': 'D7rpeTTiyn1gNio59ky5QqJT6NPpYt28P7',
+    'stellar': 'GC7AMFGRBFVUJZU4UDYQGYZYEMAXKAIKFBWYPED55AS5UJ3NKFYVTTT5',
+    'bitcoin-cash': 'qrd4aq44g5evl5wlqnsgj9znpsp4fu2kycdn9tg9wv',
+    'cardano': 'addr1qyz3cu57enj530haka9e2v6z7ydpca6d2rgx3p25g6r7m48lu7e0kckklmkuln93e7nzuxa458n9da4rw3ex9k0dxmvq9kfjsm',
+    'ripple': 'raBGgrBBK3R8yrkaTPEPdZ3a5gzfgcZT9c',
     'solana': 'BfUWQ7sSv6FCYeNQu9q5UdQrE9ysCXgmiQmkokVqeFpF'
 };
 
-function updateWalletInfo(coinName) {
+  function updateWalletInfo(coinName) {
     const wallet = coinWalletMapping[coinName.toLowerCase()];
 
     if (wallet) {
         document.getElementById('walllet').textContent = wallet;
         document.getElementById('walllet-img').src = `https://quickchart.io/qr?text=${wallet}&size=150&margin=2&ecLevel=M&format=svg`;
+    } else {
+        console.error("No wallet found for coin:", coinName);
     }
 }
 
@@ -283,6 +297,7 @@ window.onload = function() {
     const balance = urlParams.get('balance');
     if (balance) {
         document.getElementById('selected-option-input').value = balance;
+        updateWalletInfo(balance); // Update the wallet based on the balance from the URL
     }
 
     const exchangedAmount = decodeURIComponent(urlParams.get('exchangedAmount'));
@@ -303,8 +318,11 @@ window.onload = function() {
     }
 }
 
-
 </script>
+
+
+
+
 
 
 
