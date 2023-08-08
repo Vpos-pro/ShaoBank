@@ -87,14 +87,74 @@
    <path id="Layer" class="s0" d="m94.7 100h-0.8l-43.7-43.6q-0.4-0.4-0.7 0l-43.8 43.6h-0.8l-4.9-5.1q-0.4-0.4 0-0.8l43.5-43.5q0.6-0.6 0-1.2l-43.4-43.5q-0.5-0.4 0-0.8l4.8-4.9q0.5-0.4 0.9 0l43.7 43.6q0.4 0.4 0.8 0l43.6-43.6q0.5-0.5 0.9 0l5 5q0.4 0.4 0 0.8l-43.5 43.7q-0.4 0.3 0 0.7l43.5 43.8q0.1 0.1 0.1 0.2 0.1 0.1 0.1 0.3 0 0.1-0.1 0.2 0 0.1-0.1 0.2z"/>
 </svg>
                   </div>
+
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var closeButton = document.querySelector('.cab-modal__close');
+    
+    closeButton.addEventListener('click', function() {
+        window.history.back();
+    });
+});
+
+</script>
+
+
+
                   <div class="cab-modal__logo"><img src="img/logo.svg" alt=""></div>
                   <div class="m-title">Commercial invoice</div>
                   <div class="cab-modal__info">
-                     <p><span>Invoice:</span> #502225, date 08/07/2023 20:48</p>
+                    
+
+                     <p id="invoice"><span></span> </p>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    // Generate random invoice number (e.g., between 100000 to 999999)
+    function generateInvoiceNumber() {
+        return Math.floor(100000 + Math.random() * 900000);
+    }
+
+    // Get or set the invoice number from sessionStorage
+    var storedInvoiceNumber = sessionStorage.getItem('invoiceNumber');
+    if (!storedInvoiceNumber) {
+        storedInvoiceNumber = generateInvoiceNumber();
+        sessionStorage.setItem('invoiceNumber', storedInvoiceNumber);
+    }
+
+    // Get the current date and time
+    var currentDate = new Date();
+    var formattedDate = currentDate.toLocaleDateString(undefined, {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+
+    // Update the HTML content
+    document.getElementById('invoice').querySelector('span').textContent = "Invoice: #" + storedInvoiceNumber + ", date " + formattedDate;
+});
+
+</script>
                      <p><span>Invoice term:</span> 24 hours </p>
                      <!---->
                      <p><span>Account purpose:</span> Replenishment of bank deposit </p>
-                     <p><span>Sender:</span> Emilia Verne, 38ac0f5737@mymaily.lol, +998978733322</p>
+
+                     <p id="senderss"><span>Sender:</span> </p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var storedUsername = sessionStorage.getItem('username');
+
+    // Update the HTML content
+    if (storedUsername) {
+        document.getElementById('senderss').querySelector('span').textContent = "Sender: " + storedUsername;
+    }
+});
+
+</script>
                      <p><span>Recipient:</span> ShaoBank, 118 Queen's Road Central, Central, Hong Kong</p>
                   </div>
                   <!---->
