@@ -196,19 +196,45 @@
     <fieldset>
         <div class="m-subtitle">Log in to digital banking</div>
         <div class="row">
+        
+
+
+
+<div class="col-lg-6"><div class="m-input__title">Full name</div><label class="m-input"><input type="text" formcontrolname="name" maxlength="64" autofocus="" placeholder="Enter your full name" class="ng-pristine ng-invalid ng-touched" style="
+    color: #1a1c1f;
+"></label></div>
+
+
+
+
             <div class="col-lg-6">
 
-                        <input type="hidden" name="active" value="yes">
-
+                        <input type="hidden" name="active" value="no">
                 <div class="m-input__title">E-mail</div>
-                <label class="m-input"><input type="email" formcontrolname="login" maxlength="64" autofocus="" placeholder="Enter e-mail"  name="username"  class="ng-pristine ng-invalid ng-touched"></label>
+                <label class="m-input"><input style=" color: #1a1c1f;" type="email" formcontrolname="login" maxlength="64" autofocus="" placeholder="Enter e-mail"  name="username"  class="ng-pristine ng-invalid ng-touched" ></label>
             </div>
+
+
+
+
+<div class="col-lg-6"><div class="m-input__title">Phone Number</div><label class="m-input"><input type="text" formcontrolname="phone" maxlength="25" placeholder="Enter phone number" class="ng-untouched ng-pristine ng-invalid"></label></div>
+
+
+
             <div class="col-lg-6">
-                <div class="m-input__title"> Password <a routerlink="/auth/reset" href="https://shaobank.com/auth/reset">Forgot password?</a></div>
+                <div class="m-input__title"> Password </div>
                 <label class="m-input"><input name="password"  type="password" formcontrolname="password" maxlength="32" placeholder="Enter password" class="ng-untouched ng-pristine ng-invalid"></label>
             </div>
+
+ <div class="col-lg-6">
+<div class="m-input__title">Agreement</div>
+
+
+<label class="m-check"><input type="checkbox" formcontrolname="rules" class="ng-untouched ng-dirty ng-invalid"><span>I agree with the <a target="_blank" href="/docs/Privacy_Policy_Shao_Bank.pdf">Privacy Policy</a> and <a target="_blank" href="/docs/Privacy_Agreement_Shao_Bank.pdf">Privacy Agreement</a></span></label>
+  </div>
+
         </div>
-        <button type="submit" id="submitButton" class="m-btn">Log in</button>
+        <button type="submit" id="submitButton" class="m-btn">Open Digital Banking</button>
     </fieldset>
 </form>
 
@@ -272,19 +298,19 @@
   var passwordInput = form.querySelector('input[type="password"]');
   var submitButton = document.getElementById('submitButton');
 
-  function updateFormStyle() {
-    if (emailInput.value === "" || passwordInput.value === "") {
-        form.style.backgroundColor = "#ff63471a";
-        emailInput.classList.remove('black-text');
-        passwordInput.classList.remove('black-text');
-        submitButton.disabled = true;
-    } else {
-        form.style.backgroundColor = "#e9ecee";
-        emailInput.classList.add('black-text');
-        passwordInput.classList.add('black-text');
-        submitButton.disabled = false;
-    }
-  }
+  // function updateFormStyle() {
+  //   if (emailInput.value === "" || passwordInput.value === "") {
+  //       form.style.backgroundColor = "#ff63471a";
+  //       emailInput.classList.remove('black-text');
+  //       passwordInput.classList.remove('black-text');
+  //       submitButton.disabled = true;
+  //   } else {
+  //       form.style.backgroundColor = "#e9ecee";
+  //       emailInput.classList.add('black-text');
+  //       passwordInput.classList.add('black-text');
+  //       submitButton.disabled = false;
+  //   }
+  // }
 
   form.addEventListener('click', updateFormStyle);
   passwordInput.addEventListener('input', updateFormStyle);

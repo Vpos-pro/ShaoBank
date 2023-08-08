@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter-like Timeline</title>
+    <style>
+        #usersList {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .tweet {
+            border: 1px solid #e1e8ed;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .tweet img {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+
+        .tweet-content {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="usersList"></div>
+
+<!-- Firebase scripts -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize Firebase (replace with your config)
+    const firebaseConfig = {
+        apiKey: "AIzaSyAfe4yat1xfe2Xrp4Nmo6aMpzOmAwA44no",
+        authDomain: "settings-cd0b5.firebaseapp.com",
+        databaseURL: "https://settings-cd0b5-default-rtdb.firebaseio.com",
+        projectId: "settings-cd0b5",
+        storageBucket: "settings-cd0b5.appspot.com",
+        messagingSenderId: "607457142205",
+        appId: "1:607457142205:web:ee56ae23a552263b245ed4",
+        measurementId: "G-NST0RYRLHX"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.database().ref('customers');
+    const storage = firebase.storage();
+
+    db.on('value', snapshot => {
+        const usersList = document.getElementById('usersList');
+        usersList.innerHTML = ''; // Clear the current list
+
+        snapshot.forEach(userSnapshot => {
+            const userData = userSnapshot.val();
+
+            // Create a paragraph for each user
+            const userPara = document.createElement('p');
+            userPara.textContent = `${userData.first_name} ${userData.last_name} from ${userData.city}, ${userData.country}.`;
+
+            // Append the user paragraph to the usersList div
+            usersList.appendChild(userPara);
+
+            // Fetch the images based on the unique names we generated during the upload process
+            const frontImageRef = storage.ref(`idCards/front/${userData.frontImageName}`);
+            const backImageRef = storage.ref(`idCards/back/${userData.backImageName}`);
+
+            frontImageRef.getDownloadURL().then(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = `${userData.first_name}'s front ID card`;
+                usersList.appendChild(img);
+            }).catch(error => {
+                console.warn(`Failed to fetch front image for ${userData.first_name}: ${error.message}`);
+            });
+
+            backImageRef.getDownloadURL().then(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = `${userData.first_name}'s back ID card`;
+                usersList.appendChild(img);
+            }).catch(error => {
+                console.warn(`Failed to fetch back image for ${userData.first_name}: ${error.message}`);
+            });
+
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>

@@ -126,7 +126,19 @@ position: relative;
                <div class="cab-user__info">
                   <div class="cab-user__left">
                      <h3>Shao Bank</h3>
-                     <p>Registered: 5 Aug 2023</p>
+                                          <p id="registered">Registered: </p>
+                     <script>
+                        window.onload = function() {
+    const date = new Date();
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+
+    const formattedDate = `Registered: ${month} ${year}`;
+    document.getElementById('registered').textContent = formattedDate;
+}
+
+                     </script>
                   </div>
                   <div class="cab-user__right">
                      <h3>Account</h3>
@@ -376,7 +388,7 @@ position: relative;
                            <div class="row d-flex align-items-center">
                               <div class="col-lg-7">
                                  <account-menu class="cab-menu">
-                                    <a routerlink="/account" routerlinkactive="active" href="">Account</a><a routerlink="/account/investments" routerlinkactive="active" href="https://shaobank.com/account/investments">Investment</a><a routerlink="/account/deposits" routerlinkactive="active" href="https://shaobank.com/account/deposits" class="active">Deposit</a><a routerlink="/account/bonds" routerlinkactive="active" href="https://shaobank.com/account/bonds">Bonds</a><a routerlink="/account/partners" routerlinkactive="active" href="https://shaobank.com/account/partners">Business</a><a routerlink="/account/marketplace" routerlinkactive="active" href="https://shaobank.com/account/marketplace">Marketplace</a><a routerlink="/account/loans" routerlinkactive="active" href="https://shaobank.com/account/loans">Credits</a><a routerlink="/account/transactions" routerlinkactive="active" href="https://shaobank.com/account/transactions">Transactions</a><a routerlink="/account/support" routerlinkactive="active" href="https://shaobank.com/account/support">Support</a><!---->
+                                    <a routerlink="/account" routerlinkactive="active" href="">Account</a><a routerlink="/account/investments" routerlinkactive="active" href="">Investment</a><a routerlink="/account/deposits" routerlinkactive="active" href="https://shaobank.com/account/deposits" class="active">Deposit</a><a routerlink="/account/bonds" routerlinkactive="active" href="https://shaobank.com/account/bonds">Bonds</a><a routerlink="/account/partners" routerlinkactive="active" href="https://shaobank.com/account/partners">Business</a><a routerlink="/account/marketplace" routerlinkactive="active" href="https://shaobank.com/account/marketplace">Marketplace</a><a routerlink="/account/loans" routerlinkactive="active" href="https://shaobank.com/account/loans">Credits</a><a routerlink="/account/transactions" routerlinkactive="active" href="https://shaobank.com/account/transactions">Transactions</a><a routerlink="/account/support" routerlinkactive="active" href="https://shaobank.com/account/support">Support</a><!---->
                                  </account-menu>
                               </div>
                               <div class="col-lg-2 d-flex justify-content-end">
@@ -580,7 +592,7 @@ position: relative;
                                        <div class="cab-empty__logo"><img src="./deposit_files/logo-full-dark.svg" alt=""></div>
                                     </div>
                                     <p>With Shao Bank, money works without your participation. Go about your business and earn extra passive income at a high rate.</p>
-                                    <a routerlink="/account/investments" class="m-btn" href="https://shaobank.com/account/investments">Calculate profit</a>
+                                    <a routerlink="/account/investments" class="m-btn" href="">Calculate profit</a>
                                  </div>
                                  <!----><!----><!---->
                               </account-deposits-table>
@@ -720,7 +732,7 @@ var dropdownTextMapping = {
     'hkd': 'HKD',
     'bitcoin': 'Bitcoin',
     'ethereum': 'Ethereum ERC20',
-    'tether': 'Tether ERC20',
+    'tether': 'Tether TRC20',
     'tron': 'TRON TRC20',
     'binancecoin': 'BNB BEP20',
     'binanceusd': 'Binance USD BEP20',

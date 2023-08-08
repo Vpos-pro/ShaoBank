@@ -106,7 +106,19 @@ position: relative;
                <div class="cab-user__info">
                   <div class="cab-user__left">
                      <h3>Shao Bank</h3>
-                     <p>Registered: 5 Aug 2023</p>
+                     <p id="registered">Registered: </p>
+                     <script>
+                        window.onload = function() {
+    const date = new Date();
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+
+    const formattedDate = `Registered: ${month} ${year}`;
+    document.getElementById('registered').textContent = formattedDate;
+}
+
+                     </script>
                   </div>
                   <div class="cab-user__right">
                      <h3>Account</h3>
